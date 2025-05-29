@@ -69,6 +69,7 @@ options:
     - "CLOUDSDK_RUN_REGION=${_SERVICE_REGION}"
     - "GOOGLE_CLOUD_PROJECT=${PROJECT_ID}"
   dynamicSubstitutions: true
+  logging: CLOUD_LOGGING_ONLY
 
 # TODO: Update these User-defined substitutions
 substitutions:
@@ -79,5 +80,3 @@ substitutions:
   _AR_REPO_NAME: samples
   _AR_REPO_REGION: us-central1
   _IMAGE_NAME: ${_AR_REPO_REGION}-docker.pkg.dev/${PROJECT_ID}/${_AR_REPO_NAME}/${_SERVICE}:${SHORT_SHA}   # Tag docker image with git commit sha
-  options:
-  logging: CLOUD_LOGGING_ONLY
